@@ -22,8 +22,8 @@ terraform {
 
 provider "aws" {
   region = "us-west-2"
-  access_key = var.accessKey
-  secret_key = var.secretKey
+  access_key = var.TF_AWS_ACCESS_KEY
+  secret_key == var.TF_AWS_ACCESS_SECRET_KEY
 }
 
 provider "random" {}
@@ -32,8 +32,6 @@ resource "random_pet" "sg" {}
 
 resource "aws_instance" "web" {
   ami                    = "ami-830c94e3"
-  access_key = var.TF_AWS_ACCESS_KEY
-  secret_key == var.TF_AWS_ACCESS_SECRET_KEY
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.web-sg.id]
 
