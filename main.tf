@@ -22,8 +22,6 @@ terraform {
 
 provider "aws" {
   region = "us-west-2"
-  access_key = var.TF_AWS_ACCESS_KEY
-  secret_key == var.TF_AWS_ACCESS_SECRET_KEY
 }
 
 provider "random" {}
