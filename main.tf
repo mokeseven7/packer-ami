@@ -12,7 +12,7 @@ terraform {
     organization = "mokeseven7"
 
     workspaces {
-      name = "packer-ami-buider"
+      name = "packer-ami"
     }
   }
 }
@@ -22,8 +22,8 @@ terraform {
 
 provider "aws" {
   region = "us-west-2"
-  access_key = var.TF_AWS_ACCESS_KEY
-  secret_key == var.TF_AWS_ACCESS_SECRET_KEY
+  access_key = var.AWS_ACCESS_KEY
+  secret_key = var.AWS_ACCESS_SECRET_KEY
 }
 
 provider "random" {}
