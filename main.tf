@@ -1,9 +1,4 @@
 
-provider "aws" {
-  region = "us-west-1"
-}
-
-provider "random" {}
 
 resource "random_pet" "sg" {}
 
