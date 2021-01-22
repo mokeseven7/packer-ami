@@ -1,13 +1,4 @@
 terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-    }
-    random = {
-      source = "hashicorp/random"
-    }
-  }
-
   backend "remote" {
     organization = "mokeseven7"
 
@@ -17,12 +8,7 @@ terraform {
   }
 }
 
-
-
-
-provider "aws" {
-  region = "us-west-2"
-}
+provider "aws" {}
 
 provider "random" {}
 
